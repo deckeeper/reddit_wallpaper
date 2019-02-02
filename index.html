@@ -98,7 +98,7 @@ a{
     $('.content').html('Download has been completed!');
     $('.load').hide();
     $('#text').hide();
-    window.location.href = 'images.zip';
+    //window.location.href = 'images.zip';
   };
   
   //kicks things off
@@ -108,7 +108,8 @@ a{
       .html('');
     $(this).addClass('bar');
     $('#text').html("Download may take a couple of minutes.<br>Don't reload the page!");
-
+    //sim load time and run ajax function
+    //setTimeout(loadMe, 3000);
     $.ajax({
   url: "download.php"
 }).done(function() {
